@@ -24,51 +24,43 @@
             "params": [{
                     "passage": "Options Overlay",
                     "findRegex": "\\s*<<if \\$passage isnot \"Start\">>",
-                    "replaceFile": "game/optionsOverlay.txt",
-                    "comments": "在选项-通用里添加海报设置"
+                    "replaceFile": "game/optionsOverlay.txt"
                 },
                 {
                     "passage": "Widgets variablesVersionUpdate",
                     "findString": "<!-- 5.0.3 -->",
-                    "replaceFile": "game/variablesVersionUpdate.txt",
-                    "comments": "玩家导入存档时添加默认的海报设置"
+                    "replaceFile": "game/variablesVersionUpdate.txt"
                 },
                 {
                     "passage": "gameStartOnly",
                     "findString": "<<set $passageChangesCount to 0>>",
-                    "replaceFile": "game/gameStartOnly.txt",
-                    "comments": "在开始游戏时添加默认的海报设置"
+                    "replaceFile": "game/gameStartOnly.txt"
                 },
                 {
                     "passage": "Widgets Home Events",
                     "findString": "<<switch random(1, 6)>>",
-                    "replace": "<<rng 6>><<switch $rng>>",
-                    "comments": "修改高希望海报的进入方式（原因：方便使用修改rng的方式调测)"
+                    "replace": "<<rng 6>><<switch $rng>>"
                 },
                 {
                     "passage": "Widgets Home Events",
                     "findRegex": "\\s*<<case 5>>\n.*<<rng>>(.|\n)*?<</link>>",
-                    "replaceFile": "game/homeeventhopehi.txt",
-                    "comments": "修改高希望海报的具体内容"
+                    "replaceFile": "game/homeeventhopehi.txt"
                 },
                 {
                     "passage": "Widgets Home Events",
                     "findString": "<<switch random(1, 9)>>",
-                    "replace": "<<rng 9>><<switch $rng>>",
-                    "comments": "修改高叛逆海报的进入方式（原因：方便使用修改rng的方式调测)"
+                    "replace": "<<rng 9>><<switch $rng>>"
                 },
                 {
                     "passage": "Widgets Home Events",
                     "findRegex": "\\s*<<case 7>>\n\\s*<<generatey1>>(.|\n)*?<</link>>",
-                    "replaceFile": "game/homeeventrebhi.txt",
-                    "comments": "修改高叛逆海报的具体内容"
+                    "replaceFile": "game/homeeventrebhi.txt"
                 },
                 {
                     "passage": "Robin's Room Entrance",
-                    "findString": "<<getouticon>><<link [[离开|Orphanage]]>><</link>>",
-                    "replace": "<<robin-room-note>><<getouticon>><<link [[离开|Orphanage]]>><</link>>",
-                    "all": true,
-                    "comments": "为罗宾房间门口的便条添加图片"
+                    "findString": "<<getouticon>><<link [[Leave|Orphanage]]>><</link>>",
+                    "replace": "<<getouticon>><<link [[Leave|Orphanage]]>><</link>>",
+                    "all": true
                 }
             ]
         },
